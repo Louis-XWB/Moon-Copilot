@@ -80,6 +80,10 @@ const messageList = ref<ChatMessage[]>([
     role: "assistant",
     content: `你好，我是Hack Copilot，我可以提供 Crypto 相关知识的学习`,
   },
+  {
+    role: "user",
+    content: `什么是稳定币？稳定币是什么？`,
+  },
 ]);
 
 onMounted(() => {
