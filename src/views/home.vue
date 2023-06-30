@@ -188,12 +188,11 @@ const saveAPIKey = (apiKey: string) => {
 
 const getAPIKey = () => {
   if (apiKey) return apiKey;
-  // const aesAPIKey = localStorage.getItem("apiKey") ?? "";
-  // // const aesAPIKey = localStorage.getItem("apiKey") ?? "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";
-  // apiKey = cryptoJS.AES.decrypt(aesAPIKey, getSecretKey()).toString(
-  //   cryptoJS.enc.Utf8
-  // );
-  apiKey = "U2FsdGVkX1/hcX6CYLMOHjGvUOz+bMnXC7Md4aSjRoTre4u+RC2cfWW4PhhXd50JZYcdP+tX/K8URgeqt0+C9aqG+gfZqPB/0k6RNfQzBEM="
+  const aesAPIKey = "U2FsdGVkX1/hcX6CYLMOHjGvUOz+bMnXC7Md4aSjRoTre4u+RC2cfWW4PhhXd50JZYcdP+tX/K8URgeqt0+C9aqG+gfZqPB/0k6RNfQzBEM=";
+  // const aesAPIKey = localStorage.getItem("apiKey") ?? "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";
+  apiKey = cryptoJS.AES.decrypt(aesAPIKey, getSecretKey()).toString(
+    cryptoJS.enc.Utf8
+  );
   return apiKey;
 };
 
