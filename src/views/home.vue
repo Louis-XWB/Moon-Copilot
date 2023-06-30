@@ -144,7 +144,7 @@ const sendFirstChatMessage = async (content: string = messageContent.value) => {
     if (messageList.value.length === 3) {
       messageList.value.pop();
     }
-    messageList.value.push({ role: "assistant", defaultPrompt });
+    messageList.value.push({ role: "assistant", content:defaultPrompt });
 
     const { body, status } = await chat(messageList.value, getAPIKey());
     if (body) {
