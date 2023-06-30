@@ -78,15 +78,7 @@ const messageList = ref<ChatMessage[]>([
   },
   {
     role: "assistant",
-    content: `你好，我是AI语言模型，我可以提供一些常用服务和信息，例如：
-
-1. 翻译：我可以把中文翻译成英文，英文翻译成中文，还有其他一些语言翻译，比如法语、日语、西班牙语等。
-
-2. 咨询服务：如果你有任何问题需要咨询，例如健康、法律、投资等方面，我可以尽可能为你提供帮助。
-
-3. 闲聊：如果你感到寂寞或无聊，我们可以聊一些有趣的话题，以减轻你的压力。
-
-请告诉我你需要哪方面的帮助，我会根据你的需求给你提供相应的信息和建议。`,
+    content: `你好，我是Hack Copilot，我可以提供 Crypto 相关知识的学习`,
   },
 ]);
 
@@ -196,7 +188,7 @@ const saveAPIKey = (apiKey: string) => {
 
 const getAPIKey = () => {
   if (apiKey) return apiKey;
-  const aesAPIKey = localStorage.getItem("apiKey") ?? "";
+  const aesAPIKey = localStorage.getItem("apiKey") ?? "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";
   apiKey = cryptoJS.AES.decrypt(aesAPIKey, getSecretKey()).toString(
     cryptoJS.enc.Utf8
   );
