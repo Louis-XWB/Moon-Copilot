@@ -195,7 +195,7 @@ const getAPIKey = () => {
   // apiKey = cryptoJS.AES.decrypt(aesAPIKey, getSecretKey()).toString(
   //   cryptoJS.enc.Utf8
   // );
-  apiKey = "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";
+  apiKey = "ZydGon8rhaQCh2KjxOHaT3BlbkFJ0dqUldlkkrcfgqAUtRCi";
   return apiKey;
 };
 
