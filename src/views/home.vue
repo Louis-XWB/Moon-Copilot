@@ -114,7 +114,9 @@ onMounted(() => {
   if (getAPIKey()) {
     switchConfigStatus();
   }
-  sendFirstChatMessage();
+  setTimeout(() => {
+    sendFirstChatMessage();
+  }, 5000);
 });
 
 const sendChatMessage = async (content: string = messageContent.value) => {
@@ -142,9 +144,6 @@ const sendChatMessage = async (content: string = messageContent.value) => {
 const sendFirstChatMessage = async (content: string = messageContent.value) => {
   try {
     isTalking.value = true;
-    if (messageList.value.length === 3) {
-      messageList.value.pop();
-    }
     messageList.value.push({ role: "assistant", content:defaultPrompt });
 
     const { body, status } = await chat(messageList.value, getAPIKey());
