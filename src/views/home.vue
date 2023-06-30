@@ -188,7 +188,7 @@ const saveAPIKey = (apiKey: string) => {
 
 const getAPIKey = () => {
   if (apiKey) return apiKey;
-  const aesAPIKey = localStorage.getItem("apiKey") ?? "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";
+  const aesAPIKey = localStorage.getItem("apiKey") ?? "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";
   apiKey = cryptoJS.AES.decrypt(aesAPIKey, getSecretKey()).toString(
     cryptoJS.enc.Utf8
   );
