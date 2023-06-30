@@ -114,6 +114,7 @@ onMounted(() => {
   if (getAPIKey()) {
     switchConfigStatus();
   }
+  sendFirstChatMessage();
 });
 
 const sendChatMessage = async (content: string = messageContent.value) => {
