@@ -106,7 +106,7 @@ const messageList = ref<ChatMessage[]>([
   },
   {
     role: "user",
-    content: `什么是稳定币？稳定币是什么？`,
+    content: `初始化 Copilot 模型中，请稍等...`,
   },
 ]);
 
