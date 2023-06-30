@@ -22,7 +22,7 @@
       >
         <div class="flex justify-between items-center mb-2">
           <div class="font-bold">{{ roleAlias[item.role] }}：</div>
-          <Copy class="invisible group-hover:visible" :content="item.content" />
+          <Copy class="invisible group-hover:visible" :content="{{item.content.includes(`请你根据下面的模版`)?`什么是稳定币？稳定币是什么？`:item.content}}" />
         </div>
         <div>
           <div
