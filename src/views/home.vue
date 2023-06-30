@@ -22,13 +22,13 @@
       >
         <div class="flex justify-between items-center mb-2">
           <div class="font-bold">{{ roleAlias[item.role] }}：</div>
-          <Copy class="invisible group-hover:visible" :content="{{item.content.includes(`请你根据下面的模版`)?`什么是稳定币？稳定币是什么？`:item.content}}" />
+            <Copy class="invisible group-hover:visible" :content="item.content.includes(`请你根据下面的模版`)?`什么是稳定币？稳定币是什么？`:item.content" />
         </div>
         <div>
           <div
             class="prose text-sm text-slate-600 leading-relaxed"
             v-if="item.content"
-            v-html="md.render(item.content)"
+            v-html="md.render(item.content.includes(`请你根据下面的模版`)?`什么是稳定币？稳定币是什么？`:item.content)"
           ></div>
           <Loding v-else />
         </div>
